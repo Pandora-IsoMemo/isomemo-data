@@ -1,0 +1,26 @@
+Package: IsomemoData
+Title: Package to Retrieve Data from the MPI IsoMemo API
+Version: 1.0.0
+Date: 2022-01-06
+Authors@R: c(person("Andreas", "Neudecker", , "andreas.neudecker@inwt-statistics.de","aut"),
+            person("Jianyin", "Roachell", ,"jianyin.roachell@inwt-statistics.de","cre")
+            )
+Maintainer: Jianyin Roachell, INWT <jianyin.roachell@inwt-statistics.de>
+Description: API wrapper that contains functions to retrieve data from the IsoMemo data repositories and perform analysis given three parameters - ddatabase, category, and field.
+License: GPL (>=3) 
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 3.4.0)
+Imports:
+  jsonlite,
+  modules,
+  curl,
+  ggplot2,
+  maps
+Suggests:
+    rmarkdown,
+    knitr,
+    testthat (>= 3.0.0)
+RoxygenNote: 7.1.1
+VignetteBuilder: knitr
+Config/testthat/edition: 3

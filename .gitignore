@@ -1,0 +1,11 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.mpi-iso-app-data.Rproj
+inst/doc
+.Rdata
+.httr-oauth
+.DS_Store
+/doc/
+/Meta/
