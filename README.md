@@ -1,9 +1,6 @@
-# Code here is outdated. Please refer to https://github.com/isomemo/mpi-iso-app-data/
-
-
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# IsomemoData
+# IsomemoData (CRAN R-package)
 
 <!-- badges: start -->
 
@@ -102,4 +99,3 @@ head(df)
 #> 5  27.7625
 #> 6  21.9319
 ```
-# isomemo-data
