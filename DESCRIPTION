@@ -7,7 +7,7 @@ Authors@R: c(person("Andreas", "Neudecker", , "andreas.neudecker@inwt-statistics
             )
 Maintainer: Jianyin Roachell, INWT <jianyin.roachell@inwt-statistics.de>
 Description: API wrapper that contains functions to retrieve data from the IsoMemo data repositories and perform analysis given three parameters - ddatabase, category, and field.
-License: GPL (>=3) 
+License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
 Depends: R (>= 3.4.0)
