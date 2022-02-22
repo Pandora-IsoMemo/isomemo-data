@@ -52,7 +52,7 @@ And the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("INWT/mpi-iso-app-data")
+devtools::install_github("Pandora-IsoMemo/isomemo-data")
 ```
 
 ## Example of how to use the package:
