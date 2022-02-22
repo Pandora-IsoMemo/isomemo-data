@@ -48,10 +48,11 @@ You can install the released version of IsomemoData from
 install.packages("IsomemoData")
 ```
 
-And the development version from [GitHub](https://github.com/) with:
+Install latest development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
+library(devtools)
 devtools::install_github("Pandora-IsoMemo/isomemo-data")
 ```
 
