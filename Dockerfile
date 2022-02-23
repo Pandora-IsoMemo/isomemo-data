@@ -1,6 +1,6 @@
 FROM ghcr.io/pandora-isomemo/base-image:latest
 
-RUN installPackage rmarkdown
+RUN rm -rf bin && installPackage rmarkdown
 
 ADD . .
 
