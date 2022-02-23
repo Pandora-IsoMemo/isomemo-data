@@ -1,12 +1,13 @@
 // Author: Sebastian Warnholz
 // EMail: sebastian.warnholz@inwt-statistics.de
 pipeline {
+    agent any
     options { disableConcurrentBuilds() }
     environment {
         CUR_PROJ = 'isomemo-data' // github repo name
         CUR_PKG_FOLDER = '.' // defaults to root
         TMP_SUFFIX = """${sh(returnStdout: true, script: 'echo `cat /dev/urandom | tr -dc \'a-z\' | fold -w 6 | head -n 1`')}"""
-        GH_TOKEN = "has to be generated"
+        GH_TOKEN = credentials("github-isomemo")
     }
     stages {
         stage('Testing') {
@@ -26,7 +27,7 @@ pipeline {
                 rm -vf *.tar.gz
                 docker build -t tmp-$CUR_PROJ-$TMP_SUFFIX .
                 docker run --rm --network host -v $PWD:/app --user `id -u`:`id -g` tmp-$CUR_PROJ-$TMP_SUFFIX R CMD build $CUR_PKG_FOLDER
-                git clone https://$GH_TOKEN@github.com/Pandora-IsoMemo/drat.git
+                git clone https://$GH_TOKEN_PSW@github.com/Pandora-IsoMemo/drat.git
                 docker run --rm -v $PWD:/app --user `id -u`:`id -g` tmp-$CUR_PROJ-$TMP_SUFFIX R -e "drat::insertPackage(dir(pattern='.tar.gz'), 'drat/docs'); drat::archivePackages(repopath = 'drat/docs')"
                 cd drat && git add --all && git commit -m "Build from Jenkins" && git push
                 cd ..
