@@ -15,6 +15,7 @@ Depends: R (>= 3.5.0)
 Imports:
   jsonlite
   curl
+  modules
 Suggests:
     rmarkdown,
     knitr,

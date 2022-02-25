@@ -37,7 +37,7 @@ levels(ALL_DATA$source) # check all the database sources are there
 
 ### Let's explore another database: LiVES
 ```{r descriptives}
-getDatabaseList()
+getDatabaseList() # tells what database are currently published
 
 df1 = getData('LiVES')
 summary(df1)
