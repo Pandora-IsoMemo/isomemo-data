@@ -23,8 +23,8 @@ getDatabaseList() # returns a list of database names linked to the API call
 ```
 
 ```{r explore data}
-
 df = getData(db="IntChron",category = "Location")
+# see latitude and longitude of each site
 head(df)
 ```
 The function below retrieves ALL data and fields from all existing databases.
@@ -33,31 +33,6 @@ ALL_DATA = getData()
 print(nrow(ALL_DATA)) # check how many rows
 levels(ALL_DATA$source) # check all the database sources are there
 ```
-Where are all the incidences in the World?
-```{r analysis}
-library(ggplot2)
-library(maps)
-
-worldmap = map_data('world') # load in background map
-
-df = na.omit(df) # omit all NAs
-
-ggplot() + 
-  geom_polygon(data = worldmap, 
-                        aes(x = long, y = lat,group=group),
-                        fill = 'gray90', color = 'black') +
-  theme(plot.margin = unit(c(5, 5, 10, 10), "cm"))+
-
-  theme_void() + 
-  # now input all the major data points from the databases IntChron
-  geom_point(data = df, 
-             aes(x = as.numeric(longitude), 
-                 y = as.numeric(latitude)), color = 'red') +
-  theme(title = element_text(size = 12))
-```
-
-
-
 
 
 ### Let's explore another database: LiVES
