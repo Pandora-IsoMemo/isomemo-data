@@ -13,8 +13,8 @@ Encoding: UTF-8
 LazyData: true
 Depends: R (>= 3.5.0)
 Imports:
-  jsonlite
-  curl
+  jsonlite,
+  curl,
   modules
 Suggests:
     rmarkdown,
