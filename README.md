@@ -51,14 +51,15 @@ install.packages("IsomemoData")
 Install latest development version from [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("devtools")
-library(devtools)
-devtools::install_github("Pandora-IsoMemo/isomemo-data")
+options(repos = c(getOption("repos"), PANDORA = "https://Pandora-IsoMemo.github.io/drat/"))
+install.packages("IsoMemo")
 ```
 
 ## Example of how to use the package:
 
 ``` r
+options(repos = c(getOption("repos"), PANDORA = "https://Pandora-IsoMemo.github.io/drat/"))
+install.packages("IsoMemo")
 library(IsomemoData)
 ## basic example code
 df = getData(db="IntChron")
