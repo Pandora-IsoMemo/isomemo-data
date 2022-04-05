@@ -1,13 +1,13 @@
-Package: IsomemoData
+Package: IsoMemo
 Title: Package to Retrieve Data from the MPI IsoMemo API
-Version: 1.0.003
+Version: 1.0.004
 Date: 2022-02-25
 Authors@R: c(person("Andreas", "Neudecker", , "andreas.neudecker@inwt-statistics.de","aut"),
             person("Jianyin", "Roachell", ,"jianyin.roachell@inwt-statistics.de","cre"),
             person("Ricardo", "Fernandez", , "fernandes@shh.mpg.de","aut")
             )
 Maintainer: Jianyin Roachell, INWT <jianyin.roachell@inwt-statistics.de>
-Description: API wrapper that contains functions to retrieve data from the IsoMemo data repositories and perform analysis given three parameters - database, category, and field.
+Description: API wrapper that contains functions to retrieve data from the IsoMemo partnership databases and perform analysis given three parameters - database, category, and field.
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true

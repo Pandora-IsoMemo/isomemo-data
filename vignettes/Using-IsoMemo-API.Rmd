@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 - `getDatabaseList()` returns a list of database names linked to the API call
 - `callAPI()` initiates the request to call 
 ```{r setup}
-library(IsomemoData)
+library(IsoMemo)
 getDatabaseList() # returns a list of database names linked to the API call
 ```
 

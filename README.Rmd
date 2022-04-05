@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# IsomemoData
+# IsoMemo
 
 <!-- badges: start -->
 
@@ -42,19 +42,15 @@ To Access All IsoMemo Apps: <https://isomemoapp.com/>
 You can install the released version of IsomemoData from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-install.packages("IsomemoData")
+install.packages("IsoMemo")
 ```
 
 And the development version from [GitHub](https://github.com/) with:
 
-``` r
-# install.packages("devtools")
-devtools::install_github("INWT/mpi-iso-app-data")
-```
 ## Example of how to use the package:
 
 ```{r example}
-library(IsomemoData)
+library(IsoMemo)
 ## basic example code
 df = getData(db="IntChron")
 head(df)
