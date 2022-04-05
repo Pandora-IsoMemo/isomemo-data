@@ -16,8 +16,6 @@ knitr::opts_chunk$set(
 # IsoMemo
 
 <!-- badges: start -->
-
-[![R-CMD-check](https://github.com/INWT/mpi-iso-app-data/workflows/R-CMD-check/badge.svg)](https://github.com/INWT/mpi-iso-app-data/actions)
 [![R-CMD-check](https://github.com/Pandora-IsoMemo/isomemo-data/workflows/R-CMD-check/badge.svg)](https://github.com/Pandora-IsoMemo/isomemo-data/actions)
 <!-- badges: end -->
 
@@ -47,10 +45,15 @@ install.packages("IsoMemo")
 ```
 
 And the development version from [GitHub](https://github.com/) with:
-
+```r
+options(repos = c(getOption("repos"), PANDORA = "https://Pandora-IsoMemo.github.io/drat/"))
+install.packages("IsoMemo")
+```
 ## Example of how to use the package:
 
 ```{r example}
+options(repos = c(getOption("repos"), PANDORA = "https://Pandora-IsoMemo.github.io/drat/"))
+install.packages("IsoMemo")
 library(IsoMemo)
 ## basic example code
 df = getData(db="IntChron")

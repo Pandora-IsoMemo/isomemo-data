@@ -1,6 +1,6 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# IsomemoData (CRAN R-package)
+# IsoMemo (CRAN R-package)
 
 <!-- badges: start -->
 
@@ -26,7 +26,7 @@ information, please visit: <https://isomemo.com/>
 
 To Access All IsoMemo Apps: <https://isomemoapp.com/>
 
-*Isomemo Project Director:*
+*IsoMemo Project Director:*
 
 -   Dr. Ricardo Fernandes: <fernandes@shh.mpg.de>
 -   Max Planck Institute for the Science of Human History. School of
@@ -41,11 +41,11 @@ To Access All IsoMemo Apps: <https://isomemoapp.com/>
 
 ## Installation
 
-You can install the released version of IsomemoData from
+You can install the released version of IsoMemo from
 [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-install.packages("IsomemoData")
+install.packages("IsoMemo")
 ```
 
 Install latest development version from [GitHub](https://github.com/) with:
@@ -60,7 +60,7 @@ install.packages("IsoMemo")
 ``` r
 options(repos = c(getOption("repos"), PANDORA = "https://Pandora-IsoMemo.github.io/drat/"))
 install.packages("IsoMemo")
-library(IsomemoData)
+library(IsoMemo)
 ## basic example code
 df = getData(db="IntChron")
 head(df)
