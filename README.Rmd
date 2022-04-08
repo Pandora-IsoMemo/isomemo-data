@@ -38,7 +38,7 @@ To Access All IsoMemo Apps: <https://isomemoapp.com/>
 
 ## Installation
 
-You can install the released version of IsomemoData from [CRAN](https://CRAN.R-project.org) with:
+You can install the released version of IsoMemo from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
 install.packages("IsoMemo")
@@ -54,6 +54,7 @@ install.packages("IsoMemo")
 ```{r example}
 options(repos = c(getOption("repos"), PANDORA = "https://Pandora-IsoMemo.github.io/drat/"))
 install.packages("IsoMemo")
+devtools::load_all(".")
 library(IsoMemo)
 ## basic example code
 df = getData(db="IntChron")
