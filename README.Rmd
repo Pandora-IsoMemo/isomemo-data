@@ -54,7 +54,6 @@ install.packages("IsoMemo")
 ```{r example}
 options(repos = c(getOption("repos"), PANDORA = "https://Pandora-IsoMemo.github.io/drat/"))
 install.packages("IsoMemo")
-devtools::load_all(".")
 library(IsoMemo)
 ## basic example code
 df = getData(db="IntChron")
