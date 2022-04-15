@@ -40,12 +40,12 @@ To Access All IsoMemo Apps: <https://isomemoapp.com/>
 
 You can install the released version of IsoMemo from [CRAN](https://CRAN.R-project.org) with:
 
-``` r
+``` r {installation}
 install.packages("IsoMemo")
 ```
 
 And the development version from [GitHub](https://github.com/) with:
-```r
+```r {installation}
 options(repos = c(getOption("repos"), PANDORA = "https://Pandora-IsoMemo.github.io/drat/"))
 install.packages("IsoMemo")
 ```

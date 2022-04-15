@@ -69,7 +69,6 @@ install.packages("IsoMemo")
 #> A version of this package for your version of R might be available elsewhere,
 #> see the ideas at
 #> https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages
-devtools::load_all(".")
 #> ℹ Loading IsoMemo
 library(IsoMemo)
 ## basic example code
