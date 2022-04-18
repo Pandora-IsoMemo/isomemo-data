@@ -1,6 +1,6 @@
 Package: IsoMemo
 Title: Package to Retrieve Data from the Max Plank Institute IsoMemo API
-Version: 1.0.004
+Version: 1.0.5
 Date: 2022-04-05
 Authors@R: c(person("Andreas", "Neudecker", , "andreas.neudecker@inwt-statistics.de","aut"),
             person("Jianyin", "Roachell", ,"jianyin.roachell@inwt-statistics.de","cre"),
