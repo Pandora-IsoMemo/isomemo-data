@@ -13,8 +13,8 @@ LazyData: true
 Depends: R (>= 3.5.0)
 Imports:
   jsonlite,
-  curl,
-  modules
+  modules,
+  curl
 Suggests:
     rmarkdown,
     knitr,

@@ -9,3 +9,6 @@
 ^Dockerfile$
 ^Jenkinsfile$
 ^\.dockerignore$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
