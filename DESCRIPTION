@@ -1,13 +1,13 @@
-Package: IsomemoData
-Title: Package to Retrieve Data from the MPI IsoMemo API
-Version: 1.0.003
-Date: 2022-02-25
+Package: IsoMemo
+Title: Package to Retrieve Data from the Max Plank Institute IsoMemo API
+Version: 1.0.5
+Date: 2022-04-05
 Authors@R: c(person("Andreas", "Neudecker", , "andreas.neudecker@inwt-statistics.de","aut"),
             person("Jianyin", "Roachell", ,"jianyin.roachell@inwt-statistics.de","cre"),
-            person("Ricardo", "Fernandez", , "fernandes@shh.mpg.de","aut")
+            person("Ricardo", "Fernandes", , "fernandes@shh.mpg.de","aut")
             )
 Maintainer: Jianyin Roachell, INWT <jianyin.roachell@inwt-statistics.de>
-Description: API wrapper that contains functions to retrieve data from the IsoMemo data repositories and perform analysis given three parameters - database, category, and field.
+Description: API wrapper that contains functions to retrieve data from the IsoMemo partnership databases and perform analysis given three parameters - database, category, and field.
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
@@ -20,6 +20,6 @@ Suggests:
     rmarkdown,
     knitr,
     testthat (>= 3.0.0)
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 VignetteBuilder: knitr
 Config/testthat/edition: 3

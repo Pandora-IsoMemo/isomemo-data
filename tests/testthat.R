@@ -1,4 +1,4 @@
 library(testthat)
-library(IsomemoData)
+library(IsoMemo)
 
-test_check("IsomemoData")
+test_check("IsoMemo")
