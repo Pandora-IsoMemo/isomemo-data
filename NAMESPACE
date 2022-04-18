@@ -3,4 +3,4 @@
 export(getData)
 export(getDatabaseList)
 export(getFields)
-importFrom(jsonlite,fromJSON)
+importFrom(jsonlite,fromJSON,modules,curl)
