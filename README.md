@@ -64,11 +64,6 @@ options(repos = c(getOption("repos"), PANDORA = "https://Pandora-IsoMemo.github.
 install.packages("IsoMemo")
 #> Installing package into '/nethome/jroachell/R/x86_64-pc-linux-gnu-library/4.1'
 #> (as 'lib' is unspecified)
-#> Warning: package 'IsoMemo' is not available for this version of R
-#> 
-#> A version of this package for your version of R might be available elsewhere,
-#> see the ideas at
-#> https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages
 ```
 
 ## Example of how to use the package:
@@ -78,13 +73,7 @@ options(repos = c(getOption("repos"), PANDORA = "https://Pandora-IsoMemo.github.
 install.packages("IsoMemo")
 #> Installing package into '/nethome/jroachell/R/x86_64-pc-linux-gnu-library/4.1'
 #> (as 'lib' is unspecified)
-#> Warning: package 'IsoMemo' is not available for this version of R
-#> 
-#> A version of this package for your version of R might be available elsewhere,
-#> see the ideas at
-#> https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages
 
-#> ℹ Loading IsoMemo
 library(IsoMemo)
 ## basic example code
 df = getData(db="IntChron")

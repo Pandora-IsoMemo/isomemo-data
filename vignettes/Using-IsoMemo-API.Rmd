@@ -1,8 +1,8 @@
 ---
-title: "Using IsoMemo for Analysis (draft)"
+title: "How to Use IsoMemo for Reseachers"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Using IsoMemo for Analysis}
+  %\VignetteIndexEntry{How to Use IsoMemo for Reseachers}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
