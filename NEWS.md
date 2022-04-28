@@ -1,7 +1,5 @@
 # IsoMemo 1.0.5
 
-# IsomemoData v0.0.1
-
 ## Features
 The main function that facilitate the data retrieval and aggregation from the API is: `getData()`
 
