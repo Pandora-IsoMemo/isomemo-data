@@ -29,9 +29,9 @@ head(df)
 ```
 The function below retrieves ALL data and fields from all existing databases.
 ```{r all data}
-ALL_DATA = getData()
-print(nrow(ALL_DATA)) # check how many rows
-levels(ALL_DATA$source) # check all the database sources are there
+# ALL_DATA = getData()
+# print(nrow(ALL_DATA)) # check how many rows
+# levels(ALL_DATA$source) # check all the database sources are there
 ```
 
 
