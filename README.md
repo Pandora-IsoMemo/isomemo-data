@@ -24,9 +24,7 @@ also promotes the creation of networks linking different databases.
 
 This R package to retrieve data from Max-Planck-Institute (MPI) IsoMemo
 Web-application API and publish on CRAN for public download. For more
-information, please visit: <https://isomemo.com/>
-
-To Access All IsoMemo Apps: <https://isomemoapp.com/>
+information and access all IsoMemo Apps: <https://isomemoapp.com/>
 
 *Isomemo Project Director:*
 
