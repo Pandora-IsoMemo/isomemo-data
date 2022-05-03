@@ -31,7 +31,7 @@ getData <- function(db = getDatabaseList(), category = NULL, field = NULL) {
 
 
 #' Get field mapping table
-#'
+#' @return A dataframe that contains the requested field, type, and categories of data specs
 #' @export
 getFields <- function() {
   mapping <- getMappingAPI()
@@ -40,7 +40,7 @@ getFields <- function() {
 }
 
 #' Get list of databases available
-#'
+#' @return A list of possible database names
 #' @export
 getDatabaseList <- function() {
   res <- callAPI("dbsources")

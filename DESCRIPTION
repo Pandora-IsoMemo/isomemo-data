@@ -1,13 +1,13 @@
 Package: IsoMemo
-Title: Package to Retrieve Data from the Max Plank Institute IsoMemo API
-Version: 1.0.5
-Date: 2022-04-18
+Title: Retrieve Data using the Max Plank Institute 'IsoMemo' API 
+Version: 1.0.5.001
+Date: 2022-05-03
 Authors@R: c(
             person("Jianyin", "Roachell", ,"jianyin.roachell@inwt-statistics.de","cre"),
             person("Andreas", "Neudecker", , "andreas.neudecker@inwt-statistics.de","aut"),
             person("Ricardo", "Fernandes", , "fernandes@shh.mpg.de","aut")
             )
-Description: API wrapper that contains functions to retrieve data from the IsoMemo partnership databases and perform analysis given three parameters - database, category, and field.
+Description: API wrapper that contains functions to retrieve data from the 'IsoMemo' partnership databases. Webservices for API: {https://isomemodb.com/api/v1/} 
 Maintainer: Jianyin Roachell <jianyin.roachell@inwt-statistics.de>
 License: GPL (>= 3)
 Encoding: UTF-8
