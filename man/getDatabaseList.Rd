@@ -6,6 +6,9 @@
 \usage{
 getDatabaseList()
 }
+\value{
+A list of possible database names
+}
 \description{
 Get list of databases available
 }

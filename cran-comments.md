@@ -45,4 +45,4 @@ Missing Rd-tags:
       getDatabaseList.Rd: \value
       getFields.Rd: \value
 
-Yes, done. 
+Yes, done. `getDatabaseList.Rd` (line 9) & `getFields.Rd` (line 9)

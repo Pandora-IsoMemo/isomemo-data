@@ -6,6 +6,9 @@
 \usage{
 getFields()
 }
+\value{
+A dataframe that contains the requested field, type, and categories of data specs
+}
 \description{
 Get field mapping table
 }
