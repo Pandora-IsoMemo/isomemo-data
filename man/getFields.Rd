@@ -6,6 +6,9 @@
 \usage{
 getFields()
 }
+\value{
+A dataframe that contains the requested field (column name)
+}
 \description{
 Get field mapping table
 }
