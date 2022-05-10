@@ -7,7 +7,7 @@
 getFields()
 }
 \value{
-A dataframe that contains the requested field, type, and categories of data specs
+A dataframe that contains the requested field (column name)
 }
 \description{
 Get field mapping table

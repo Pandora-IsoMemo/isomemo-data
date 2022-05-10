@@ -4,7 +4,7 @@
 #' Given the parameters Database name, category names, and field names.
 #'
 #' @param db database options: "14CSea" ,  "IntChron" , "IsoArcH" , "LiVES"
-#' @param category category of fields to retrieve: "Dating info","Isotopic proxies." If set to NULL (default) all categories are returned
+#' @param category domain specific categories of fields to retrieve: "Dating info","Isotopic proxies." If set to NULL (default) all categories are returned
 #' @param field fields to return. If set to NULL (default) all fields will be returned
 #'
 #' @return A dataframe of relevant databases, categories, and fields
