@@ -1,13 +1,13 @@
 #' @title API wrapper that fetches data from IsoMemo Applications
 #'
-#' @description Data retrieval for the Isomemoapp Project https://isomemoapp.com/
+#' @description Data retrieval for the IsoMemo App Project https://isomemoapp.com/
 #' Given the parameters Database name, category names, and field names.
 #'
 #' @param db database options: "14CSea" ,  "IntChron" , "IsoArcH" , "LiVES"
 #' @param category domain specific categories of fields to retrieve: "Dating info","Isotopic proxies." If set to NULL (default) all categories are returned
 #' @param field fields to return. If set to NULL (default) all fields will be returned
 #'
-#' @return A dataframe of relevant databases, categories, and fields
+#' @return A data frame containing the requested databases, category domains, and variables of interest from the user
 #' @export
 #'
 #' @examples
@@ -31,7 +31,7 @@ getData <- function(db = getDatabaseList(), category = NULL, field = NULL) {
 
 
 #' Get field mapping table
-#' @return A dataframe that contains the requested field, type, and categories of data specs
+#' @return A data frame that describes data field name, data type, and domain category
 #' @export
 getFields <- function() {
   mapping <- getMappingAPI()
@@ -40,7 +40,7 @@ getFields <- function() {
 }
 
 #' Get list of databases available
-#' @return A list of possible database names
+#' @return A character vector of possible database names currently available
 #' @export
 getDatabaseList <- function() {
   res <- callAPI("dbsources")

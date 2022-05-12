@@ -9,15 +9,15 @@ getData(db = getDatabaseList(), category = NULL, field = NULL)
 \arguments{
 \item{db}{database options: "14CSea" ,  "IntChron" , "IsoArcH" , "LiVES"}
 
-\item{category}{category of fields to retrieve: "Dating info","Isotopic proxies." If set to NULL (default) all categories are returned}
+\item{category}{domain specific categories of fields to retrieve: "Dating info","Isotopic proxies." If set to NULL (default) all categories are returned}
 
 \item{field}{fields to return. If set to NULL (default) all fields will be returned}
 }
 \value{
-A dataframe of relevant databases, categories, and fields
+A data frame containing the requested databases, category domains, and variables of interest from the user
 }
 \description{
-Data retrieval for the Isomemoapp Project https://isomemoapp.com/
+Data retrieval for the IsoMemo App Project https://isomemoapp.com/
 Given the parameters Database name, category names, and field names.
 }
 \examples{

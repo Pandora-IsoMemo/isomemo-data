@@ -7,7 +7,7 @@
 getDatabaseList()
 }
 \value{
-A list of possible database names in character format, each name is a string value
+A character vector of possible database names currently available
 }
 \description{
 Get list of databases available
