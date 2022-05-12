@@ -74,33 +74,33 @@ install.packages("IsoMemo")
 
 library(IsoMemo)
 ## basic example code
-df = getData(db="IntChron")
+df = getData(db="LiVES")
 head(df)
-#>     source    id        description                         site dateMean
-#> 1 IntChron A-205       NA , wood ,                         Semna     3290
-#> 2 IntChron A-206       NA , wood ,                         Semna     3300
-#> 3 IntChron A-207          , wood ,                         Kumma     3160
-#> 4 IntChron A-219 NA , wood , acacia Saqqara Step Pyramid Complex     4240
-#> 5 IntChron A-220       NA , wood ,                    El-Bersheh     3840
-#> 6 IntChron A-330   NA , charcoal ,                         Buhen     3960
-#>   dateUncertainty d13C
-#> 1             120   NA
-#> 2             120   NA
-#> 3             160   NA
-#> 4             150   NA
-#> 5             150   NA
-#> 6              60   NA
+#>   source   id                        description  d13C d15N latitude longitude
+#> 1  LiVES 1000 Ajdovska Jama 21 , S Neo (Lengyel) -20.4  9.0  45.9667   15.4833
+#> 2  LiVES 1001  Ajdovska Jama 3 , S Neo (Lengyel) -20.6  8.1  45.9667   15.4833
+#> 3  LiVES 1002  Ajdovska Jama 6 , S Neo (Lengyel) -20.8  9.0  45.9667   15.4833
+#> 4  LiVES 1003  Ajdovska Jama 7 , S Neo (Lengyel) -20.3  8.1  45.9667   15.4833
+#> 5  LiVES 1004    Ajdovska Jama , S Neo (Lengyel) -22.4  5.8  45.9667   15.4833
+#> 6  LiVES 1005    Ajdovska Jama , S Neo (Lengyel) -21.0  6.6  45.9667   15.4833
+#>            site dateMean dateLower dateUpper dateUncertainty  datingType
+#> 1 Ajdovska Jama     5365      4328      4055              31 radiocarbon
+#> 2 Ajdovska Jama     5421      4340      4235              30 radiocarbon
+#> 3 Ajdovska Jama     5436      4344      4244              30 radiocarbon
+#> 4 Ajdovska Jama     5485      4448      4243              50 radiocarbon
+#> 5 Ajdovska Jama     4250      4450      4050             100      expert
+#> 6 Ajdovska Jama     4250      4450      4050             100      expert
 
 # with category argument
-df = getData(db="IntChron",category = "Location")
+df = getData(db="LiVES",category = "Location")
 head(df)
-#>                           site
-#> 1                        Semna
-#> 2                        Semna
-#> 3                        Kumma
-#> 4 Saqqara Step Pyramid Complex
-#> 5                   El-Bersheh
-#> 6                        Buhen
+#>   latitude longitude          site
+#> 1  45.9667   15.4833 Ajdovska Jama
+#> 2  45.9667   15.4833 Ajdovska Jama
+#> 3  45.9667   15.4833 Ajdovska Jama
+#> 4  45.9667   15.4833 Ajdovska Jama
+#> 5  45.9667   15.4833 Ajdovska Jama
+#> 6  45.9667   15.4833 Ajdovska Jama
 
 # with field argument
 df = getData(db="LiVES",category = "Location",field= "latitude")
