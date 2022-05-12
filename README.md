@@ -46,7 +46,7 @@ You can install the released version of IsoMemo from
 
 ``` r
 install.packages("IsoMemo")
-#> Installing package into '/nethome/jroachell/R/x86_64-pc-linux-gnu-library/4.1'
+#> Installing package into '/nethome/jroachell/R/x86_64-pc-linux-gnu-library/4.2'
 #> (as 'lib' is unspecified)
 #> Warning: package 'IsoMemo' is not available for this version of R
 #> 
@@ -60,7 +60,7 @@ And the development version from [GitHub](https://github.com/) with:
 ``` r
 options(repos = c(getOption("repos"), PANDORA = "https://Pandora-IsoMemo.github.io/drat/"))
 install.packages("IsoMemo")
-#> Installing package into '/nethome/jroachell/R/x86_64-pc-linux-gnu-library/4.1'
+#> Installing package into '/nethome/jroachell/R/x86_64-pc-linux-gnu-library/4.2'
 #> (as 'lib' is unspecified)
 ```
 
@@ -69,7 +69,7 @@ install.packages("IsoMemo")
 ``` r
 options(repos = c(getOption("repos"), PANDORA = "https://Pandora-IsoMemo.github.io/drat/"))
 install.packages("IsoMemo")
-#> Installing package into '/nethome/jroachell/R/x86_64-pc-linux-gnu-library/4.1'
+#> Installing package into '/nethome/jroachell/R/x86_64-pc-linux-gnu-library/4.2'
 #> (as 'lib' is unspecified)
 
 library(IsoMemo)
@@ -103,9 +103,13 @@ head(df)
 #> 6                        Buhen
 
 # with field argument
-df = getData(db="IntChron",category = "Location",field= "latitude")
-#> Warning in getData(db = "IntChron", category = "Location", field = "latitude"):
-#> data.frame is empty, the category or field may not exist in the database
+df = getData(db="LiVES",category = "Location",field= "latitude")
 head(df)
-#> NULL
+#>   latitude
+#> 1  45.9667
+#> 2  45.9667
+#> 3  45.9667
+#> 4  45.9667
+#> 5  45.9667
+#> 6  45.9667
 ```
