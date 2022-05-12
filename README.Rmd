@@ -55,11 +55,11 @@ install.packages("IsoMemo")
 
 library(IsoMemo)
 ## basic example code
-df = getData(db="IntChron")
+df = getData(db="LiVES")
 head(df)
 
 # with category argument
-df = getData(db="IntChron",category = "Location")
+df = getData(db="LiVES",category = "Location")
 head(df)
 
 # with field argument
