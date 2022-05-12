@@ -1,5 +1,5 @@
 ---
-title: "How to Use IsoMemo for Reseachers"
+title: "How to Use IsoMemo for Researchers"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{How to Use IsoMemo for Reseachers}

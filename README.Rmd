@@ -63,7 +63,7 @@ df = getData(db="IntChron",category = "Location")
 head(df)
 
 # with field argument
-df = getData(db="IntChron",category = "Location",field= "latitude")
+df = getData(db="LiVES",category = "Location",field= "latitude")
 head(df)
 ```
 
