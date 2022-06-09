@@ -1,5 +1,5 @@
 Package: IsoMemo
-Title: Retrieve Data using the Max Plank Institute 'IsoMemo' API 
+Title: Retrieve Data using the Max Planck Institute 'IsoMemo' API 
 Version: 1.0.5
 Date: 2022-06-01
 Authors@R: c(

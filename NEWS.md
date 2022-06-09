@@ -1,3 +1,8 @@
+# IsoMemo 1.0.5001
+
+# corrections with name changes and corrections:
+- Change `Max Plank` to `Max Planck`
+
 # IsoMemo 1.0.5
 
 ## Features
