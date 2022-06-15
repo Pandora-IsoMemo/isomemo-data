@@ -1,7 +1,7 @@
 Package: IsoMemo
-Title: Retrieve Data using the Max Planck Institute 'IsoMemo' API 
-Version: 1.0.5
-Date: 2022-06-01
+Title: Retrieve Data using the 'IsoMemo' API
+Version: 1.0.5001
+Date: 2022-06-14
 Authors@R: c(
             person("Jianyin", "Roachell", ,"jianyin.roachell@inwt-statistics.de","cre"),
             person("Andreas", "Neudecker", , "andreas.neudecker@inwt-statistics.de","aut"),
