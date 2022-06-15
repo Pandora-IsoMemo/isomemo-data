@@ -1,6 +1,6 @@
-# IsoMemo 1.0.5001
+# IsoMemo 1.0.6
 
-# corrections with name changes and corrections:
+## Corrections with name changes and corrections:
 - Name changes:
   - Where it says "Retrieve Data using the Max Plank Institute 'IsoMemo' API" change this to: "Retrieve Data using the 'IsoMemo' API". This is in the pdf and in the title of the webpage.
 
