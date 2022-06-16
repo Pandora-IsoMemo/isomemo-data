@@ -1,3 +1,19 @@
+## 1.0.6 Submission
+### R CMD check results
+* checking dependencies in R code ... NOTE
+Namespaces in Imports field not imported from:
+  'curl' 'modules'
+  All declared Imports should be used.
+  #### we need this curl modul for the testing
+* checking examples ... NOTE
+Examples with CPU (user + system) or elapsed time > 5s
+        user system elapsed
+getData 1.36   0.46    7.22
+#### this the core function, it takes a little bit of time. It's okay.
+* checking for detritus in the temp directory ... NOTE
+Found the following files/directories:
+  'lastMiKTeXException'
+
 ## 1.0.5 Submission 
 ### R CMD check results
 0 errors ✓ | 0 warning ✓ | 2 notes x
