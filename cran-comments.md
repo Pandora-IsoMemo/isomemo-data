@@ -16,7 +16,6 @@ Examples with CPU (user + system) or elapsed time > 5s
          user system elapsed
 getData 0.952    0.4   8.141
 
-## 1.0.5.001 Submission
 > ### Review 1
 > Please omit the redundant "Package to" from your title.
 
