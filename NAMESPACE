@@ -3,4 +3,5 @@
 export(getData)
 export(getDatabaseList)
 export(getFields)
+export(getMappingIds)
 importFrom(jsonlite,fromJSON)
