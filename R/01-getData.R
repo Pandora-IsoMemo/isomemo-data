@@ -17,6 +17,7 @@
 #' getData(db = "IntChron")
 #' getData(db = "IntChron", category = "Location")
 #' getData(db = "IntChron", category = "Location", field = "latitude")
+#' getData(db = "IntChron", category = "Location", field = "latitude", mappingId = "IsoMemo")
 #'
 getData <- function(db = getDatabaseList(mappingId = "IsoMemo"),
                     category = NULL,

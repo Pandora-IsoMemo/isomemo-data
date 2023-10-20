@@ -32,5 +32,6 @@ name, category names, and field names.
 getData(db = "IntChron")
 getData(db = "IntChron", category = "Location")
 getData(db = "IntChron", category = "Location", field = "latitude")
+getData(db = "IntChron", category = "Location", field = "latitude", mappingId = "IsoMemo")
 
 }
