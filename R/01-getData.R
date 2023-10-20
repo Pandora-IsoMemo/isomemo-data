@@ -88,8 +88,7 @@ callAPI <- function(action, ...) {
   }
 
   params <- list(...)
-  paramString <-
-    paste(names(params), params, sep = "=", collapse = "&")
+  paramString <- paste(names(params), params, sep = "=", collapse = "&")
 
   apiBaseURL <- config$apiBaseUrl()
   url <- paste(apiBaseURL, action, "?", paramString, sep = "")
