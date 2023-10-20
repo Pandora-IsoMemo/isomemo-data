@@ -4,6 +4,8 @@
 #' name, category names, and field names.
 #'
 #'
+#' @param mappingId (character) Optionally, provide a specific mappingId in order to obtain a list
+#'  of databases only for that mapping. Check available mapping ids with getMappingIds().
 #' @param db database options:  "14CSea"   "CIMA"     "IntChron" "LiVES"
 #' @param category domain specific categories of fields to retrieve: "Dating info","Isotopic proxies." If set to NULL (default) all categories are returned
 #' @param field fields to return. If set to NULL (default) all fields will be returned
@@ -16,10 +18,13 @@
 #' getData(db = "IntChron", category = "Location")
 #' getData(db = "IntChron", category = "Location", field = "latitude")
 #'
-getData <- function(db = getDatabaseList(), category = NULL, field = NULL) {
+getData <- function(mappingId = "IsoMemo",
+                    db = getDatabaseList(mappingId = "IsoMemo"),
+                    category = NULL,
+                    field = NULL) {
   if (is.null(db)) return(NULL)
 
-  isoData <- getRemoteDataAPI(db = db, category = category, field = field)
+  isoData <- getRemoteDataAPI(db = db, category = category, field = field, mappingId = mappingId)
 
   if(dim(isoData)[2] == 0){
     warning("data.frame is empty, the category or field may not exist in the database")
@@ -33,9 +38,10 @@ getData <- function(db = getDatabaseList(), category = NULL, field = NULL) {
 
 #' Get field mapping table
 #' @return A data frame that describes data field name, data type, and domain category
+#' @inheritParams getData
 #' @export
-getFields <- function() {
-  mapping <- getMappingAPI()
+getFields <- function(mappingId = "IsoMemo") {
+  mapping <- getMappingAPI(mappingId = mappingId)
   names(mapping) <- c("field", "fieldType", "category")
   mapping
 }
@@ -85,25 +91,7 @@ callAPI <- function(action, ...) {
   paramString <-
     paste(names(params), params, sep = "=", collapse = "&")
 
-  if (Sys.getenv("API_BASE_URL") == "" &&
-      Sys.getenv("API_BASE_URL_DEFAULT") == "") {
-    stop(
-      paste0(
-        "Cannot reach API. Environment variable 'API_BASE_URL' is missing. ",
-        "Please add the API_BASE_URL to your .Renviron file ",
-        "(e.g. 'API_BASE_URL=https://isomemodb.com/testapi/v1/'), or provide ",
-        "API_BASE_URL as a parameter to docker ",
-        "(e.g. 'docker run -p 3838:3838 -e API_BASE_URL=https://isomemodb.com/api/v1/ ghcr.io/pandora-isomemo/iso-app:main')."
-      )
-    )
-  }
-
-  if (Sys.getenv("API_BASE_URL") != "") {
-    apiBaseURL <- Sys.getenv("API_BASE_URL")
-  } else {
-    apiBaseURL <- Sys.getenv("API_BASE_URL_DEFAULT")
-  }
-
+  apiBaseURL <- config$apiBaseUrl()
   url <- paste(apiBaseURL, action, "?", paramString, sep = "")
 
   data <- try({
@@ -132,13 +120,18 @@ callAPI <- function(action, ...) {
   res
 }
 
-getRemoteDataAPI <- function(db = NULL, mappingId = "IsoMemo") {
-  res <- callAPI("iso-data", mappingId = mappingId, dbsource = paste(db, collapse = ","))
+getRemoteDataAPI <- function(db = NULL, field = NULL, category = NULL, mappingId = "IsoMemo") {
+  res <- callAPI(
+    "iso-data",
+    mappingId = mappingId,
+    dbsource = paste(db, collapse = ","),
+    field = paste(field, collapse = ","),
+    category = paste(category, collapse = ",")
+  )
   if (!is.null(res) && length(res) > 0) {
     attr(res$isodata, "updated") <- res$updated
     fillIsoData(res$isodata, getMappingAPI(mappingId = mappingId))
-  } else
-    res
+  } else res
 }
 
 fillIsoData <- function(data, mapping) {
@@ -153,4 +146,12 @@ getMappingAPI <- function(mappingId = "IsoMemo") {
     res$mapping
   else
     res
+}
+
+has_internet <- function(timeout = 2) {
+  res <- try({
+    httr::GET("http://google.com/", timeout(timeout))
+  }, silent = TRUE)
+
+  ! inherits(res, "try-error")
 }
