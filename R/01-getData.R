@@ -4,11 +4,11 @@
 #' name, category names, and field names.
 #'
 #'
-#' @param mappingId (character) Optionally, provide a specific mappingId in order to obtain a list
-#'  of databases only for that mapping. Check available mapping ids with getMappingIds().
 #' @param db database options:  "14CSea"   "CIMA"     "IntChron" "LiVES"
 #' @param category domain specific categories of fields to retrieve: "Dating info","Isotopic proxies." If set to NULL (default) all categories are returned
 #' @param field fields to return. If set to NULL (default) all fields will be returned
+#' @param mappingId (character) Optionally, provide a specific mappingId in order to obtain a list
+#'  of databases only for that mapping. Check available mapping ids with getMappingIds().
 #'
 #' @return A data frame containing the requested databases, category domains, and variables of interest from the user
 #' @export
@@ -18,10 +18,10 @@
 #' getData(db = "IntChron", category = "Location")
 #' getData(db = "IntChron", category = "Location", field = "latitude")
 #'
-getData <- function(mappingId = "IsoMemo",
-                    db = getDatabaseList(mappingId = "IsoMemo"),
+getData <- function(db = getDatabaseList(mappingId = "IsoMemo"),
                     category = NULL,
-                    field = NULL) {
+                    field = NULL,
+                    mappingId = "IsoMemo") {
   if (is.null(db)) return(NULL)
 
   isoData <- getRemoteDataAPI(db = db, category = category, field = field, mappingId = mappingId)

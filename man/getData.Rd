@@ -5,21 +5,21 @@
 \title{API wrapper that fetches data from IsoMemo Applications}
 \usage{
 getData(
-  mappingId = "IsoMemo",
   db = getDatabaseList(mappingId = "IsoMemo"),
   category = NULL,
-  field = NULL
+  field = NULL,
+  mappingId = "IsoMemo"
 )
 }
 \arguments{
-\item{mappingId}{(character) Optionally, provide a specific mappingId in order to obtain a list
-of databases only for that mapping. Check available mapping ids with getMappingIds().}
-
 \item{db}{database options:  "14CSea"   "CIMA"     "IntChron" "LiVES"}
 
 \item{category}{domain specific categories of fields to retrieve: "Dating info","Isotopic proxies." If set to NULL (default) all categories are returned}
 
 \item{field}{fields to return. If set to NULL (default) all fields will be returned}
+
+\item{mappingId}{(character) Optionally, provide a specific mappingId in order to obtain a list
+of databases only for that mapping. Check available mapping ids with getMappingIds().}
 }
 \value{
 A data frame containing the requested databases, category domains, and variables of interest from the user
