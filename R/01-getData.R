@@ -26,7 +26,7 @@ getData <- function(mappingId = "IsoMemo",
 
   isoData <- getRemoteDataAPI(db = db, category = category, field = field, mappingId = mappingId)
 
-  if(dim(isoData)[2] == 0){
+  if(length(isoData) == 0){
     warning("data.frame is empty, the category or field may not exist in the database")
     return(NULL)
   } else {
@@ -96,6 +96,7 @@ callAPI <- function(action, ...) {
   data <- try({
     fromJSON(url)
   }, silent = TRUE)
+
   if (inherits(data, "try-error")) {
     warning(data[[1]])
     res <- list()
@@ -127,16 +128,11 @@ getRemoteDataAPI <- function(db = NULL, field = NULL, category = NULL, mappingId
     field = paste(field, collapse = ","),
     category = paste(category, collapse = ",")
   )
+
   if (!is.null(res) && length(res) > 0) {
     attr(res$isodata, "updated") <- res$updated
-    fillIsoData(res$isodata, getMappingAPI(mappingId = mappingId))
+    res$isodata
   } else res
-}
-
-fillIsoData <- function(data, mapping) {
-  colToFill <- mapping$shiny[!(mapping$shiny %in% names(data))]
-  data[colToFill] <- NA
-  data
 }
 
 getMappingAPI <- function(mappingId = "IsoMemo") {
