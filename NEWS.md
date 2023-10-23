@@ -1,8 +1,11 @@
 # IsoMemo 23.10.0
 
 ## Features
-The main function `getData()` has got a new optional parameter `mapping` to change the mapping that is applied for the combination of data sources that can be retrieved using the 'IsoMemo' API. Currently the 'IsoMemo' API understands one mapping called "IsoMemo".
-More mappings that combine different sources of data, will be added in the future.
+
+- The main function `getData()` has got a new optional parameter `mapping` to change the mapping that is applied for the combination of data sources that can be retrieved using the 'IsoMemo' API.
+- Currently the 'IsoMemo' API understands one mapping called "IsoMemo".
+- More mappings that combine different sources of data, will be added in the future.
+- Switch from SemVer to CalVer
 
 # IsoMemo 1.0.6
 
