@@ -22,6 +22,9 @@
     <loc>/news/index.html</loc>
   </url>
   <url>
+    <loc>/reference/callAPI.html</loc>
+  </url>
+  <url>
     <loc>/reference/getData.html</loc>
   </url>
   <url>
@@ -29,6 +32,9 @@
   </url>
   <url>
     <loc>/reference/getFields.html</loc>
+  </url>
+  <url>
+    <loc>/reference/getMappings.html</loc>
   </url>
   <url>
     <loc>/reference/index.html</loc>

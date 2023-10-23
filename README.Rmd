@@ -16,7 +16,6 @@ knitr::opts_chunk$set(
 # IsoMemo
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/Pandora-IsoMemo/isomemo-data/workflows/R-CMD-check/badge.svg)](https://github.com/Pandora-IsoMemo/isomemo-data/actions)
 [![R-CMD-check](https://github.com/Pandora-IsoMemo/isomemo-data/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Pandora-IsoMemo/isomemo-data/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
@@ -32,8 +31,7 @@ This R package to retrieve data from Max-Planck-Institute (MPI) IsoMemo Web-appl
 *Developer*: INWT Statistics GmbH 
 
 * API developer: Andreas Neudecker, INWT <andreas.neudecker@inwt-statistics.de>
-* Maintainer: Jianyin Roachell, INWT <jianyin.roachell@inwt-statistics.de>
-
+* Maintainer: Jan Abel, INWT <abel.jan@inwt-statistics.de>
 
 ## Installation
 

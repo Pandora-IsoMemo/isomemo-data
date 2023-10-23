@@ -10,7 +10,7 @@ Authors@R: c(
             person("Ricardo", "Fernandes", , "fernandes@shh.mpg.de","aut")
             )
 Description: API wrapper that contains functions to retrieve data from the 'IsoMemo' partnership databases. Web services for API: <https://isomemodb.com/api/v1/iso-data>. 
-Maintainer: Antonia Runge <antonia.runge@inwt-statistics.de>
+Maintainer: Jan Abel <jan.abel@inwt-statistics.de>
 BugReports: https://github.com/Pandora-IsoMemo/isomemo-data/issues
 License: GPL (>= 3)
 Encoding: UTF-8
