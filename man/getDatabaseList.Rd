@@ -4,11 +4,11 @@
 \alias{getDatabaseList}
 \title{Get Database List}
 \usage{
-getDatabaseList(mappingId = "IsoMemo")
+getDatabaseList(mapping = "IsoMemo")
 }
 \arguments{
-\item{mappingId}{(character) If desired, provide a different mappingId in order to obtain a list
-of databases for that mapping. Check available mapping ids with getMappingIds().}
+\item{mapping}{(character) Optionally, provide a specific mapping in order to obtain a list
+of databases only for that mapping. Check available mapping ids with getMappingIds().}
 }
 \description{
 Get Database List

@@ -5,10 +5,10 @@
 \title{API wrapper that fetches data from IsoMemo Applications}
 \usage{
 getData(
-  db = getDatabaseList(mappingId = "IsoMemo"),
+  db = getDatabaseList(mapping = "IsoMemo"),
   category = NULL,
   field = NULL,
-  mappingId = "IsoMemo"
+  mapping = "IsoMemo"
 )
 }
 \arguments{
@@ -18,7 +18,7 @@ getData(
 
 \item{field}{fields to return. If set to NULL (default) all fields will be returned}
 
-\item{mappingId}{(character) Optionally, provide a specific mappingId in order to obtain a list
+\item{mapping}{(character) Optionally, provide a specific mapping in order to obtain a list
 of databases only for that mapping. Check available mapping ids with getMappingIds().}
 }
 \value{
@@ -32,6 +32,6 @@ name, category names, and field names.
 getData(db = "IntChron")
 getData(db = "IntChron", category = "Location")
 getData(db = "IntChron", category = "Location", field = "latitude")
-getData(db = "IntChron", category = "Location", field = "latitude", mappingId = "IsoMemo")
+getData(db = "IntChron", category = "Location", field = "latitude", mapping = "IsoMemo")
 
 }

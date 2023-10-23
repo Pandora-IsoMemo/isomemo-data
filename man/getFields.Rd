@@ -4,10 +4,10 @@
 \alias{getFields}
 \title{Get field mapping table}
 \usage{
-getFields(mappingId = "IsoMemo")
+getFields(mapping = "IsoMemo")
 }
 \arguments{
-\item{mappingId}{(character) Optionally, provide a specific mappingId in order to obtain a list
+\item{mapping}{(character) Optionally, provide a specific mapping in order to obtain a list
 of databases only for that mapping. Check available mapping ids with getMappingIds().}
 }
 \value{
