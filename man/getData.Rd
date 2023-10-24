@@ -30,8 +30,6 @@ name, category names, and field names.
 }
 \examples{
 getData(db = "IntChron")
-getData(db = "IntChron", category = "Location")
-getData(db = "IntChron", category = "Location", field = "latitude")
 getData(db = "IntChron", category = "Location", field = "latitude", mapping = "IsoMemo")
 
 }

@@ -15,8 +15,6 @@
 #'
 #' @examples
 #' getData(db = "IntChron")
-#' getData(db = "IntChron", category = "Location")
-#' getData(db = "IntChron", category = "Location", field = "latitude")
 #' getData(db = "IntChron", category = "Location", field = "latitude", mapping = "IsoMemo")
 #'
 getData <- function(db = getDatabaseList(mapping = "IsoMemo"),
@@ -80,13 +78,6 @@ getDatabaseList <- function(mapping = "IsoMemo") {
 #' @param ... parameters for the endpoint, e.g. mappingId = "IsoMemo", dbsource = "LiVES,
 #'  field = "site,longitude", ...
 callAPI <- function(action, ...) {
-  if (!has_internet()) {
-    warning("No internet connection.")
-    res <- list()
-    attr(res, "errorApi") <- "No internet connection ..."
-    return(res)
-  }
-
   params <- list(...)
   paramString <- paste(names(params), params, sep = "=", collapse = "&")
 
@@ -141,12 +132,4 @@ getMappingAPI <- function(mapping = "IsoMemo") {
     res$mapping
   else
     res
-}
-
-has_internet <- function(timeout = 2) {
-  res <- try({
-    httr::GET("http://google.com/", timeout(timeout))
-  }, silent = TRUE)
-
-  ! inherits(res, "try-error")
 }
