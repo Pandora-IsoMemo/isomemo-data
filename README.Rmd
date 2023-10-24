@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 # IsoMemo
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/Pandora-IsoMemo/isomemo-data/workflows/R-CMD-check/badge.svg)](https://github.com/Pandora-IsoMemo/isomemo-data/actions)
+[![R-CMD-check](https://github.com/Pandora-IsoMemo/isomemo-data/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Pandora-IsoMemo/isomemo-data/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 IsoMemo is a Big Data initiative bringing together isotopic data from archaeology, ecology, and environmental & life sciences. Isotopic tracers are used across a variety of research fields to provide a rich diversity of scientific information, but lack of centralized storage limits efficient data use. The IsoMemo initiative brings together independent repositories of isotopic data within the fields of archaeology, ecology, and environmental & life sciences. The goals of the initiative are to make isotopic data easily findable and accessible so that it can be easily reused for research purposes. IsoMemo also promotes the creation of data standards and interoperability with other types. Within IsoMemo each independent database self-manages and curates their data and defines metadata requirements. However, the initiative also promotes the creation of networks linking different databases.
@@ -31,8 +31,7 @@ This R package to retrieve data from Max-Planck-Institute (MPI) IsoMemo Web-appl
 *Developer*: INWT Statistics GmbH 
 
 * API developer: Andreas Neudecker, INWT <andreas.neudecker@inwt-statistics.de>
-* Maintainer: Jianyin Roachell, INWT <jianyin.roachell@inwt-statistics.de>
-
+* Maintainer: Jan Abel, INWT <abel.jan@inwt-statistics.de>
 
 ## Installation
 

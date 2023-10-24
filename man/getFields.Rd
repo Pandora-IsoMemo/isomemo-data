@@ -4,7 +4,11 @@
 \alias{getFields}
 \title{Get field mapping table}
 \usage{
-getFields()
+getFields(mapping = "IsoMemo")
+}
+\arguments{
+\item{mapping}{(character) Optionally, provide a specific mapping in order to obtain a list
+of databases only for that mapping. Check available mapping ids with getMappingIds().}
 }
 \value{
 A data frame that describes data field name, data type, and domain category

@@ -2,13 +2,14 @@
 % Please edit documentation in R/01-getData.R
 \name{getDatabaseList}
 \alias{getDatabaseList}
-\title{Get list of databases available}
+\title{Get Database List}
 \usage{
-getDatabaseList()
+getDatabaseList(mapping = "IsoMemo")
 }
-\value{
-A character vector of possible database names currently available
+\arguments{
+\item{mapping}{(character) Optionally, provide a specific mapping in order to obtain a list
+of databases only for that mapping. Check available mapping ids with getMappingIds().}
 }
 \description{
-Get list of databases available
+Get Database List
 }

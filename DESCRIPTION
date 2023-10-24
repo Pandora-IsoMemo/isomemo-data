@@ -1,27 +1,29 @@
 Package: IsoMemo
 Title: Retrieve Data using the 'IsoMemo' API
-Version: 1.0.6
-Date: 2022-06-14
+Version: 23.10.0
+Date: 2023-10-23
 Authors@R: c(
             person("Jianyin", "Roachell", ,"jianyin.roachell@inwt-statistics.de","cre"),
             person("Andreas", "Neudecker", , "andreas.neudecker@inwt-statistics.de","aut"),
+            person("Antonia", "Runge", , "antonia.runge@inwt-statistics.de","aut"),
+            person("Jan", "Abel", , "jan.abel@inwt-statistics.de","aut"),
             person("Ricardo", "Fernandes", , "fernandes@shh.mpg.de","aut")
             )
 Description: API wrapper that contains functions to retrieve data from the 'IsoMemo' partnership databases. Web services for API: <https://isomemodb.com/api/v1/iso-data>. 
-Maintainer: Jianyin Roachell <jianyin.roachell@inwt-statistics.de>
+Maintainer: Jan Abel <jan.abel@inwt-statistics.de>
 BugReports: https://github.com/Pandora-IsoMemo/isomemo-data/issues
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
 Depends: R (>= 3.5.0)
 Imports:
+  httr,
   jsonlite,
-  modules,
-  curl
+  modules
 Suggests:
-    rmarkdown,
     knitr,
+    rmarkdown,
     testthat (>= 3.0.0)
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.3
 VignetteBuilder: knitr
 Config/testthat/edition: 3

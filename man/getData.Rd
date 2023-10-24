@@ -4,7 +4,12 @@
 \alias{getData}
 \title{API wrapper that fetches data from IsoMemo Applications}
 \usage{
-getData(db = getDatabaseList(), category = NULL, field = NULL)
+getData(
+  db = getDatabaseList(mapping = "IsoMemo"),
+  category = NULL,
+  field = NULL,
+  mapping = "IsoMemo"
+)
 }
 \arguments{
 \item{db}{database options:  "14CSea"   "CIMA"     "IntChron" "LiVES"}
@@ -12,6 +17,9 @@ getData(db = getDatabaseList(), category = NULL, field = NULL)
 \item{category}{domain specific categories of fields to retrieve: "Dating info","Isotopic proxies." If set to NULL (default) all categories are returned}
 
 \item{field}{fields to return. If set to NULL (default) all fields will be returned}
+
+\item{mapping}{(character) Optionally, provide a specific mapping in order to obtain a list
+of databases only for that mapping. Check available mapping ids with getMappingIds().}
 }
 \value{
 A data frame containing the requested databases, category domains, and variables of interest from the user
@@ -24,5 +32,6 @@ name, category names, and field names.
 getData(db = "IntChron")
 getData(db = "IntChron", category = "Location")
 getData(db = "IntChron", category = "Location", field = "latitude")
+getData(db = "IntChron", category = "Location", field = "latitude", mapping = "IsoMemo")
 
 }

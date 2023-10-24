@@ -7,6 +7,8 @@
 #' @param db database options:  "14CSea"   "CIMA"     "IntChron" "LiVES"
 #' @param category domain specific categories of fields to retrieve: "Dating info","Isotopic proxies." If set to NULL (default) all categories are returned
 #' @param field fields to return. If set to NULL (default) all fields will be returned
+#' @param mapping (character) Optionally, provide a specific mapping in order to obtain a list
+#'  of databases only for that mapping. Check available mapping ids with getMappingIds().
 #'
 #' @return A data frame containing the requested databases, category domains, and variables of interest from the user
 #' @export
@@ -15,13 +17,17 @@
 #' getData(db = "IntChron")
 #' getData(db = "IntChron", category = "Location")
 #' getData(db = "IntChron", category = "Location", field = "latitude")
+#' getData(db = "IntChron", category = "Location", field = "latitude", mapping = "IsoMemo")
 #'
-getData <- function(db = getDatabaseList(), category = NULL, field = NULL) {
+getData <- function(db = getDatabaseList(mapping = "IsoMemo"),
+                    category = NULL,
+                    field = NULL,
+                    mapping = "IsoMemo") {
   if (is.null(db)) return(NULL)
 
-  isoData <- getRemoteDataAPI(db = db, category = category, field = field)
+  isoData <- getRemoteDataAPI(db = db, category = category, field = field, mapping = mapping)
 
-  if(dim(isoData)[2] == 0){
+  if(length(isoData) == 0){
     warning("data.frame is empty, the category or field may not exist in the database")
     return(NULL)
   } else {
@@ -33,61 +39,114 @@ getData <- function(db = getDatabaseList(), category = NULL, field = NULL) {
 
 #' Get field mapping table
 #' @return A data frame that describes data field name, data type, and domain category
+#' @inheritParams getData
 #' @export
-getFields <- function() {
-  mapping <- getMappingAPI()
-  names(mapping) <- c("field", "fieldType", "category")
-  mapping
+getFields <- function(mapping = "IsoMemo") {
+  res <- getMappingAPI(mapping = mapping)
+  names(res) <- c("field", "fieldType", "category")
+  res
 }
 
-#' Get list of databases available
-#' @return A character vector of possible database names currently available
+#' Get Mappings
+#'
+#' Get all available mapping ids
+#'
 #' @export
-getDatabaseList <- function() {
-  res <- callAPI("dbsources")
-  if (!is.null(res)) res$dbsource
-  else res
+getMappings <- function() {
+  res <- callAPI("mapping-ids")
+  if (!is.null(res) && length(res) > 0)
+    res$mappingIds
+  else
+    res
+}
+
+#' Get Database List
+#'
+#' @inheritParams getData
+#' @export
+getDatabaseList <- function(mapping = "IsoMemo") {
+  res <- callAPI("dbsources", mappingId = mapping)
+  if (!is.null(res) && length(res) > 0)
+    res$dbsource
+  else
+    res
 }
 
 
+#' Call API
+#'
+#' @param action (character) name of the endpoint, one of "mapping-ids", "dbsources", "iso-data" or
+#'  "mapping"
+#' @param ... parameters for the endpoint, e.g. mappingId = "IsoMemo", dbsource = "LiVES,
+#'  field = "site,longitude", ...
 callAPI <- function(action, ...) {
-  # return(NULL)
+  if (!has_internet()) {
+    warning("No internet connection.")
+    res <- list()
+    attr(res, "errorApi") <- "No internet connection ..."
+    return(res)
+  }
+
   params <- list(...)
   paramString <- paste(names(params), params, sep = "=", collapse = "&")
 
   apiBaseURL <- config$apiBaseUrl()
   url <- paste(apiBaseURL, action, "?", paramString, sep = "")
-  data <- fromJSON(url)
 
-  if (data$status == 200) data
-  else if (!is.null(data$message)) {
+  data <- try({
+    fromJSON(url)
+  }, silent = TRUE)
+
+  if (inherits(data, "try-error")) {
+    warning(data[[1]])
+    res <- list()
+    attr(res, "errorApi") <- data[[1]]
+  } else if (data$status == 200) {
+    res <- data
+  } else if (!is.null(data$message)) {
     warning(data$message)
-    NULL
+    res <- list()
+    attr(res, "errorApi") <- data$message
   } else if (!is.null(data$error)) {
-    stop(data$error)
-    NULL
+    warning(data$error)
+    res <- list()
+    attr(res, "errorApi") <- data$error
+  } else {
+    warning("An error occured")
+    res <- list()
+    attr(res, "errorApi") <- "An error occured"
   }
-  else {
-    stop("An error occured when calling the API")
-    NULL
-  }
+
+  res
 }
 
-getRemoteDataAPI <- function(db, field = NULL, category = NULL) {
+getRemoteDataAPI <- function(db = NULL, field = NULL, category = NULL, mapping = "IsoMemo") {
   res <- callAPI(
     "iso-data",
+    mappingId = mapping,
     dbsource = paste(db, collapse = ","),
     field = paste(field, collapse = ","),
     category = paste(category, collapse = ",")
   )
-  if (!is.null(res)) {
+
+  if (!is.null(res) && length(res) > 0) {
     attr(res$isodata, "updated") <- res$updated
     res$isodata
   } else res
 }
 
-getMappingAPI <- function(){
-  res <- callAPI("mapping")
-  if (!is.null(res)) res$mapping
-  else res
+getMappingAPI <- function(mapping = "IsoMemo") {
+  res <- callAPI("mapping", mappingId = mapping)
+  if (!is.null(res) && length(res) > 0)
+    res$mapping
+  else
+    res
+}
+
+has_internet <- function(timeout = 2) {
+  res <- try({
+    httr::GET("http://google.com/", timeout(timeout))
+  }, silent = TRUE)
+
+  ! inherits(res, "try-error")
 }

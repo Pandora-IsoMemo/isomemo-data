@@ -1,3 +1,8 @@
+## 23.10.0
+
+* This is a re-release of the package with a new maintainer. The old package was 
+  archived on 2023-06-28.
+
 ## 1.0.6 Submission
 ### R CMD check results
 * checking dependencies in R code ... NOTE
