@@ -13,12 +13,6 @@
 #' @return A data frame containing the requested databases, category domains, and variables of interest from the user
 #' @export
 #'
-#' @examples
-#' getData(db = "IntChron")
-#' getData(db = "IntChron", category = "Location")
-#' getData(db = "IntChron", category = "Location", field = "latitude")
-#' getData(db = "IntChron", category = "Location", field = "latitude", mapping = "IsoMemo")
-#'
 getData <- function(db = getDatabaseList(mapping = "IsoMemo"),
                     category = NULL,
                     field = NULL,
