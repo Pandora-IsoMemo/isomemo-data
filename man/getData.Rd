@@ -28,8 +28,3 @@ A data frame containing the requested databases, category domains, and variables
 Data retrieval for databases within the IsoMemo initiative (https://isomemo.com/). Given the parameters Database
 name, category names, and field names.
 }
-\examples{
-getData(db = "IntChron")
-getData(db = "IntChron", category = "Location", field = "latitude", mapping = "IsoMemo")
-
-}
