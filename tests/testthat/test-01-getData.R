@@ -1,8 +1,5 @@
 test_that("getData() actually retrieves all data", {
   df <- getData()
-
-  cat((levels(df$source)[1]))
-
   expect_match(levels(df$source)[1],"14CSea")
   expect_match(levels(df$source)[2],"CIMA")
   expect_match(levels(df$source)[3],"IntChron")
