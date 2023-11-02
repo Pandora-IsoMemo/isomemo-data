@@ -45,6 +45,7 @@ getFields <- function(mapping = "IsoMemo") {
 #'
 #' Get all available mapping ids
 #'
+#' @return A character vector with all available mapping ids
 #' @export
 getMappings <- function() {
   res <- callAPI("mapping-ids")
@@ -57,6 +58,8 @@ getMappings <- function() {
 #' Get Database List
 #'
 #' @inheritParams getData
+#'
+#' @return A character vector with all available databases
 #' @export
 getDatabaseList <- function(mapping = "IsoMemo") {
   res <- callAPI("dbsources", mappingId = mapping)
@@ -129,3 +132,4 @@ getMappingAPI <- function(mapping = "IsoMemo") {
   else
     res
 }
+

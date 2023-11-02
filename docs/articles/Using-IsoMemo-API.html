@@ -98,16 +98,17 @@ linked to the API call</li>
 <span><span class="fu"><a href="../reference/getDatabaseList.html">getDatabaseList</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># returns a character format of list of database names linked to the API call</span></span>
 <span><span class="co">#&gt; [1] "14CSea"   "CIMA"     "IntChron" "LiVES"</span></span></code></pre></div>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">df</span> <span class="op">=</span> <span class="fu"><a href="../reference/getData.html">getData</a></span><span class="op">(</span>db<span class="op">=</span><span class="st">"IntChron"</span>,category <span class="op">=</span> <span class="st">"Location"</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">df</span> <span class="op">=</span> <span class="fu"><a href="../reference/getData.html">getData</a></span><span class="op">(</span>db <span class="op">=</span> <span class="st">"IntChron"</span>, category <span class="op">=</span> <span class="st">"Location"</span>, field <span class="op">=</span> <span class="st">"latitude"</span>, mapping <span class="op">=</span> <span class="st">"IsoMemo"</span><span class="op">)</span></span>
 <span><span class="co"># see latitude and longitude of each site</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span>
-<span><span class="co">#&gt;   latitude longitude site</span></span>
-<span><span class="co">#&gt; 1       NA        NA &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 2       NA        NA &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 3       NA        NA &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 4       NA        NA &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 5       NA        NA &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 6       NA        NA &lt;NA&gt;</span></span></code></pre></div>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span>
+<span><span class="co">#&gt;     latitude     </span></span>
+<span><span class="co">#&gt;  Min.   :-75.00  </span></span>
+<span><span class="co">#&gt;  1st Qu.: 25.74  </span></span>
+<span><span class="co">#&gt;  Median : 33.60  </span></span>
+<span><span class="co">#&gt;  Mean   : 32.97  </span></span>
+<span><span class="co">#&gt;  3rd Qu.: 51.18  </span></span>
+<span><span class="co">#&gt;  Max.   : 78.57  </span></span>
+<span><span class="co">#&gt;  NA's   :45546</span></span></code></pre></div>
 <p>The function below retrieves ALL data and fields from all existing
 databases.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
@@ -179,7 +180,7 @@ d15N:</p>
 
     <footer><div class="pkgdown-footer-left">
   <p></p>
-<p>Developed by Jianyin Roachell, Andreas Neudecker, Antonia Runge, Jan Abel, Ricardo Fernandes.</p>
+<p>Developed by Jan Abel, Jianyin Roachell, Andreas Neudecker, Antonia Runge, Ricardo Fernandes.</p>
 </div>
 
 <div class="pkgdown-footer-right">
