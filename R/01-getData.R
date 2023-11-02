@@ -4,11 +4,11 @@
 #' name, category names, and field names.
 #'
 #'
-#' @param db database options:  "14CSea"   "CIMA"     "IntChron" "LiVES"
-#' @param category domain specific categories of fields to retrieve: "Dating info","Isotopic proxies." If set to NULL (default) all categories are returned
-#' @param field fields to return. If set to NULL (default) all fields will be returned
+#' @param db (character) database options:  "14CSea"   "CIMA"     "IntChron" "LiVES"
+#' @param category (character) domain specific categories of fields to retrieve: "Dating info","Isotopic proxies." If set to NULL (default) all categories are returned
+#' @param field (character) fields to return. If set to NULL (default) all fields will be returned
 #' @param mapping (character) Optionally, provide a specific mapping in order to obtain a list
-#'  of databases only for that mapping. Check available mapping ids with getMappingIds().
+#'  of databases only for that mapping. Check available mapping ids with getMappings()
 #'
 #' @return A data frame containing the requested databases, category domains, and variables of interest from the user
 #' @export
@@ -32,12 +32,18 @@ getData <- function(db = getDatabaseList(mapping = "IsoMemo"),
 
 
 #' Get field mapping table
-#' @return A data frame that describes data field name, data type, and domain category
+#'
+#' @param colnamesAPI (logical) Optionally, return a dataframe with the column names as they come
+#'  from the 'IsoMemo' API
 #' @inheritParams getData
+#' @return A data frame that describes data field name, data type, and domain category
 #' @export
-getFields <- function(mapping = "IsoMemo") {
+getFields <- function(mapping = "IsoMemo", colnamesAPI = FALSE) {
   res <- getMappingAPI(mapping = mapping)
-  names(res) <- c("field", "fieldType", "category")
+
+  if (!colnamesAPI) {
+    names(res) <- c("field", "fieldType", "category", "mapping")
+  }
   res
 }
 

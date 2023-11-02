@@ -1,3 +1,11 @@
+# IsoMemo 23.10.1
+
+## Features
+- optional parameter in `getFields()` to receive the column names as they come from the 'IsoMemo' API
+
+## Bug Fixes
+- fix missing column name in `getFields()`
+
 # IsoMemo 23.10.0
 
 ## Features
