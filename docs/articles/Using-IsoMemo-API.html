@@ -26,7 +26,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">IsoMemo</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">23.10.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">23.10.1</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -124,38 +124,38 @@ databases.</p>
 <span></span>
 <span><span class="va">df1</span> <span class="op">=</span> <span class="fu"><a href="../reference/getData.html">getData</a></span><span class="op">(</span><span class="st">'LiVES'</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">df1</span><span class="op">)</span></span>
-<span><span class="co">#&gt;    source           id                                description  </span></span>
-<span><span class="co">#&gt;  LiVES:3664   1000   :   1   Makrigialos , S Neo (I)        :  22  </span></span>
-<span><span class="co">#&gt;               1001   :   1   Ajdovska Jama , S Neo (Lengyel):  10  </span></span>
-<span><span class="co">#&gt;               1002   :   1   Argus Bank , S Meso (Kongemose):   7  </span></span>
-<span><span class="co">#&gt;               1003   :   1   Spathes , S BZ                 :   5  </span></span>
-<span><span class="co">#&gt;               1004   :   1   Korinos , S BZ                 :   4  </span></span>
-<span><span class="co">#&gt;               1005   :   1   Rymnio , S BZ                  :   4  </span></span>
-<span><span class="co">#&gt;               (Other):3658   (Other)                        :3612  </span></span>
-<span><span class="co">#&gt;       d13C             d15N          latitude       longitude      </span></span>
-<span><span class="co">#&gt;  Min.   :-25.00   Min.   : 4.38   Min.   :32.36   Min.   :-10.439  </span></span>
-<span><span class="co">#&gt;  1st Qu.:-20.65   1st Qu.: 8.60   1st Qu.:40.42   1st Qu.:  7.506  </span></span>
-<span><span class="co">#&gt;  Median :-19.89   Median : 9.70   Median :48.57   Median : 13.847  </span></span>
-<span><span class="co">#&gt;  Mean   :-19.66   Mean   :10.14   Mean   :47.22   Mean   : 14.921  </span></span>
-<span><span class="co">#&gt;  3rd Qu.:-19.10   3rd Qu.:11.20   3rd Qu.:51.87   3rd Qu.: 22.717  </span></span>
-<span><span class="co">#&gt;  Max.   :-10.27   Max.   :18.31   Max.   :68.09   Max.   : 84.050  </span></span>
-<span><span class="co">#&gt;  NA's   :60       NA's   :721                                      </span></span>
-<span><span class="co">#&gt;               site         dateMean        dateLower        dateUpper    </span></span>
-<span><span class="co">#&gt;  Durankulak     :  83   Min.   :   686   Min.   :   758   Min.   :  352  </span></span>
-<span><span class="co">#&gt;  Aghia Triada   :  70   1st Qu.:  3150   1st Qu.:  2559   1st Qu.: 2065  </span></span>
-<span><span class="co">#&gt;  Aiterhofen     :  60   Median :  4495   Median :  3970   Median : 3520  </span></span>
-<span><span class="co">#&gt;  Lepenski Vir   :  55   Mean   :  4970   Mean   :  4761   Mean   : 4224  </span></span>
-<span><span class="co">#&gt;  Varna          :  55   3rd Qu.:  5421   3rd Qu.:  5360   3rd Qu.: 5000  </span></span>
-<span><span class="co">#&gt;  Niederröblingen:  53   Max.   :105000   Max.   :130000   Max.   :80000  </span></span>
-<span><span class="co">#&gt;  (Other)        :3288   NA's   :7        NA's   :7        NA's   :7      </span></span>
-<span><span class="co">#&gt;  dateUncertainty         datingType  </span></span>
-<span><span class="co">#&gt;  Min.   :  -17.5   expert     :2225  </span></span>
-<span><span class="co">#&gt;  1st Qu.:   49.0   radiocarbon:1439  </span></span>
-<span><span class="co">#&gt;  Median :   80.0                     </span></span>
-<span><span class="co">#&gt;  Mean   :  125.5                     </span></span>
-<span><span class="co">#&gt;  3rd Qu.:  125.0                     </span></span>
-<span><span class="co">#&gt;  Max.   :12500.0                     </span></span>
-<span><span class="co">#&gt;  NA's   :273</span></span></code></pre></div>
+<span><span class="co">#&gt;    source          id            description             d13C       </span></span>
+<span><span class="co">#&gt;  LiVES:3664   Length:3664        Length:3664        Min.   :-25.00  </span></span>
+<span><span class="co">#&gt;               Class :character   Class :character   1st Qu.:-20.65  </span></span>
+<span><span class="co">#&gt;               Mode  :character   Mode  :character   Median :-19.89  </span></span>
+<span><span class="co">#&gt;                                                     Mean   :-19.66  </span></span>
+<span><span class="co">#&gt;                                                     3rd Qu.:-19.10  </span></span>
+<span><span class="co">#&gt;                                                     Max.   :-10.27  </span></span>
+<span><span class="co">#&gt;                                                     NA's   :60      </span></span>
+<span><span class="co">#&gt;       d15N          latitude       longitude           site          </span></span>
+<span><span class="co">#&gt;  Min.   : 4.38   Min.   :32.36   Min.   :-10.439   Length:3664       </span></span>
+<span><span class="co">#&gt;  1st Qu.: 8.60   1st Qu.:40.42   1st Qu.:  7.506   Class :character  </span></span>
+<span><span class="co">#&gt;  Median : 9.70   Median :48.57   Median : 13.847   Mode  :character  </span></span>
+<span><span class="co">#&gt;  Mean   :10.14   Mean   :47.22   Mean   : 14.921                     </span></span>
+<span><span class="co">#&gt;  3rd Qu.:11.20   3rd Qu.:51.87   3rd Qu.: 22.717                     </span></span>
+<span><span class="co">#&gt;  Max.   :18.31   Max.   :68.09   Max.   : 84.050                     </span></span>
+<span><span class="co">#&gt;  NA's   :721                                                         </span></span>
+<span><span class="co">#&gt;     dateMean        dateLower        dateUpper     dateUncertainty  </span></span>
+<span><span class="co">#&gt;  Min.   :   686   Min.   :   758   Min.   :  352   Min.   :  -17.5  </span></span>
+<span><span class="co">#&gt;  1st Qu.:  3150   1st Qu.:  2559   1st Qu.: 2065   1st Qu.:   49.0  </span></span>
+<span><span class="co">#&gt;  Median :  4495   Median :  3970   Median : 3520   Median :   80.0  </span></span>
+<span><span class="co">#&gt;  Mean   :  4970   Mean   :  4761   Mean   : 4224   Mean   :  125.5  </span></span>
+<span><span class="co">#&gt;  3rd Qu.:  5421   3rd Qu.:  5360   3rd Qu.: 5000   3rd Qu.:  125.0  </span></span>
+<span><span class="co">#&gt;  Max.   :105000   Max.   :130000   Max.   :80000   Max.   :12500.0  </span></span>
+<span><span class="co">#&gt;  NA's   :7        NA's   :7        NA's   :7       NA's   :273      </span></span>
+<span><span class="co">#&gt;        datingType  </span></span>
+<span><span class="co">#&gt;  expert     :2225  </span></span>
+<span><span class="co">#&gt;  radiocarbon:1439  </span></span>
+<span><span class="co">#&gt;                    </span></span>
+<span><span class="co">#&gt;                    </span></span>
+<span><span class="co">#&gt;                    </span></span>
+<span><span class="co">#&gt;                    </span></span>
+<span><span class="co">#&gt; </span></span></code></pre></div>
 <p>How is the distribution of the variable “d15N” isotope?</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/hist.html" class="external-link">hist</a></span><span class="op">(</span><span class="va">df1</span><span class="op">$</span><span class="va">d15N</span><span class="op">)</span></span></code></pre></div>

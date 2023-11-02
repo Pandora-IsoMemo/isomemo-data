@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">IsoMemo</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">23.10.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">23.10.1</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,14 +57,19 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">getFields</span><span class="op">(</span>mapping <span class="op">=</span> <span class="st">"IsoMemo"</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">getFields</span><span class="op">(</span>mapping <span class="op">=</span> <span class="st">"IsoMemo"</span>, colnamesAPI <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>mapping</dt>
 <dd><p>(character) Optionally, provide a specific mapping in order to obtain a list
-of databases only for that mapping. Check available mapping ids with getMappingIds().</p></dd>
+of databases only for that mapping. Check available mapping ids with getMappings()</p></dd>
+
+
+<dt>colnamesAPI</dt>
+<dd><p>(logical) Optionally, return a dataframe with the column names as they come
+from the 'IsoMemo' API</p></dd>
 
 </dl></div>
     <div class="section level2">
