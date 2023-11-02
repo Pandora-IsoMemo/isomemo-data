@@ -25,7 +25,9 @@ getData <- function(db = getDatabaseList(mapping = "IsoMemo"),
     warning("data.frame is empty, the category or field may not exist in the database")
     return(NULL)
   } else {
-    isoData[sapply(isoData, is.character)] <- lapply(isoData[sapply(isoData, is.character)], as.factor)
+    asFactorColumns <- colnames(isoData) %in% c("source", "datingType")
+    isoData[asFactorColumns] <- lapply(isoData[asFactorColumns], as.factor)
+
     isoData
   }
 }
