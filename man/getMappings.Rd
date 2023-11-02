@@ -6,6 +6,9 @@
 \usage{
 getMappings()
 }
+\value{
+A character vector with all available mapping ids
+}
 \description{
 Get all available mapping ids
 }
