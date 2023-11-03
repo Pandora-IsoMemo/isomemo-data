@@ -4,11 +4,11 @@
 #' name, category names, and field names.
 #'
 #'
-#' @param db database options:  "14CSea"   "CIMA"     "IntChron" "LiVES"
-#' @param category domain specific categories of fields to retrieve: "Dating info","Isotopic proxies." If set to NULL (default) all categories are returned
-#' @param field fields to return. If set to NULL (default) all fields will be returned
+#' @param db (character) database options:  "14CSea"   "CIMA"     "IntChron" "LiVES"
+#' @param category (character) domain specific categories of fields to retrieve: "Dating info","Isotopic proxies." If set to NULL (default) all categories are returned
+#' @param field (character) fields to return. If set to NULL (default) all fields will be returned
 #' @param mapping (character) Optionally, provide a specific mapping in order to obtain a list
-#'  of databases only for that mapping. Check available mapping ids with getMappingIds().
+#'  of databases only for that mapping. Check available mapping ids with getMappings()
 #'
 #' @return A data frame containing the requested databases, category domains, and variables of interest from the user
 #' @export
@@ -25,19 +25,27 @@ getData <- function(db = getDatabaseList(mapping = "IsoMemo"),
     warning("data.frame is empty, the category or field may not exist in the database")
     return(NULL)
   } else {
-    isoData[sapply(isoData, is.character)] <- lapply(isoData[sapply(isoData, is.character)], as.factor)
+    asFactorColumns <- colnames(isoData) %in% c("source", "datingType")
+    isoData[asFactorColumns] <- lapply(isoData[asFactorColumns], as.factor)
+
     isoData
   }
 }
 
 
 #' Get field mapping table
-#' @return A data frame that describes data field name, data type, and domain category
+#'
+#' @param colnamesAPI (logical) Optionally, return a dataframe with the column names as they come
+#'  from the 'IsoMemo' API
 #' @inheritParams getData
+#' @return A data frame that describes data field name, data type, and domain category
 #' @export
-getFields <- function(mapping = "IsoMemo") {
+getFields <- function(mapping = "IsoMemo", colnamesAPI = FALSE) {
   res <- getMappingAPI(mapping = mapping)
-  names(res) <- c("field", "fieldType", "category")
+
+  if (!colnamesAPI && length(res) == 4) {
+    names(res) <- c("field", "fieldType", "category", "mapping")
+  }
   res
 }
 
@@ -45,6 +53,7 @@ getFields <- function(mapping = "IsoMemo") {
 #'
 #' Get all available mapping ids
 #'
+#' @return A character vector with all available mapping ids
 #' @export
 getMappings <- function() {
   res <- callAPI("mapping-ids")
@@ -57,6 +66,8 @@ getMappings <- function() {
 #' Get Database List
 #'
 #' @inheritParams getData
+#'
+#' @return A character vector with all available databases
 #' @export
 getDatabaseList <- function(mapping = "IsoMemo") {
   res <- callAPI("dbsources", mappingId = mapping)
@@ -129,3 +140,4 @@ getMappingAPI <- function(mapping = "IsoMemo") {
   else
     res
 }
+

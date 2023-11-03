@@ -8,7 +8,10 @@ getDatabaseList(mapping = "IsoMemo")
 }
 \arguments{
 \item{mapping}{(character) Optionally, provide a specific mapping in order to obtain a list
-of databases only for that mapping. Check available mapping ids with getMappingIds().}
+of databases only for that mapping. Check available mapping ids with getMappings()}
+}
+\value{
+A character vector with all available databases
 }
 \description{
 Get Database List
