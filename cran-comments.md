@@ -1,3 +1,8 @@
+## 23.10.1
+
+* fixed missing Rd-tags of:
+    * getDatabaseList.Rd: \value
+    * getMappings.Rd: \value
 ## 23.10.0
 
 * This is a re-release of the package with a new maintainer. The old package was 
