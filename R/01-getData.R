@@ -43,7 +43,7 @@ getData <- function(db = getDatabaseList(mapping = "IsoMemo"),
 getFields <- function(mapping = "IsoMemo", colnamesAPI = FALSE) {
   res <- getMappingAPI(mapping = mapping)
 
-  if (!colnamesAPI) {
+  if (!colnamesAPI && length(res) == 4) {
     names(res) <- c("field", "fieldType", "category", "mapping")
   }
   res
