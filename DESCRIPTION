@@ -1,6 +1,6 @@
 Package: IsoMemo
 Title: Retrieve Data using the 'IsoMemo' API
-Version: 23.10.1
+Version: 23.11.0
 Date: 2023-10-23
 Authors@R: c(
             person("Jan", "Abel", , "jan.abel@inwt-statistics.de","cre"),
