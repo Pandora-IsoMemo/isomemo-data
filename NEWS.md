@@ -1,3 +1,8 @@
+# IsoMemo 23.11.0
+
+## Updates
+- new tests for the sub-functions
+
 # IsoMemo 23.10.1
 
 ## Features
