@@ -3,7 +3,7 @@ pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   Using-IsoMemo-API: Using-IsoMemo-API.html
-last_built: 2024-10-01T14:33Z
+last_built: 2024-10-01T15:15Z
 urls:
   reference: https://pandora-isomemo.github.io/isomemo-data/reference
   article: https://pandora-isomemo.github.io/isomemo-data/articles
