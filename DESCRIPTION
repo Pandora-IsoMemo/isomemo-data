@@ -1,7 +1,7 @@
 Package: IsoMemo
 Title: Retrieve Data using the 'IsoMemo' API
-Version: 24.10.1
-Date: 2024-10-01
+Version: 26.09.0
+Date: 2026-09-15
 Authors@R: c(
             person("Jan", "Abel", , "jan.abel@inwt-statistics.de","cre"),
             person("Jianyin", "Roachell", ,"jianyin.roachell@inwt-statistics.de","aut"),
@@ -24,7 +24,7 @@ Suggests:
     knitr,
     rmarkdown,
     testthat (>= 3.0.0)
-RoxygenNote: 7.2.3
 VignetteBuilder: knitr
 Config/testthat/edition: 3
-URL: https://pandora-isomemo.github.io/isomemo-data/
+URL: https://pandora-isomemo.github.io/isomemo-data/, https://github.com/Pandora-IsoMemo/isomemo-data
+Config/roxygen2/version: 8.0.0

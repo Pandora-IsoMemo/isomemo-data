@@ -1,6 +1,4 @@
-FROM inwt/r-shiny:4.3.2
-
-RUN echo "options(repos = c(getOption('repos'), PANDORA = 'https://Pandora-IsoMemo.github.io/drat/'))" >> /usr/local/lib/R/etc/Rprofile.site
+FROM inwt/r-shiny:4.4.1
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -9,8 +7,10 @@ RUN apt-get update \
     && apt-get autoclean -y \
     && rm -rf /var/lib/apt/lists/*
 
+RUN echo "options(repos = c(getOption('repos'), PANDORA = 'https://Pandora-IsoMemo.github.io/drat/'))" >> /usr/local/lib/R/etc/Rprofile.site
+
 RUN rm -rf bin && installPackage rmarkdown
 
-ADD . .
+COPY . .
 
 RUN installPackage
