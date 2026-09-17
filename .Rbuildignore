@@ -1,17 +1,56 @@
+# RStudio / IDE files
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^README\.Rmd$
+^\.vscode$
+
+# Local/user config
+^\.Rprofile$
+^\.Renviron$
+^\.env$
+^\.lintr$
+
+# Version control / GitHub
+^\.git$
+^\.gitignore$
 ^\.github$
-^cran-comments\.md$
-^doc$
-^Meta$
-^LICENSE\.md$
+
+# CI / deployment / containers
 ^Dockerfile$
-^Jenkinsfile$
 ^\.dockerignore$
+^Jenkinsfile$
+^deploy\.sh$
+
+# pkgdown site and config
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
-docs
 
+# Local dependency/vendor libraries
+^lib$
+^libWin$
+^libMac$
+^libLinux$
+^deps$
+
+# Build/test artifacts
+^covr$
+^bin$
+^src/.+\.so$
+^src/.+\.o$
+^src/.+\.dll$
+^src/.+\.dylib$
+^src/Makevars$
+^.*\.tar\.gz$
+^.*\.Rcheck$
+
+# Non-package license/readme variants
+^LICENSE\.md$
+
+^inst/data$
+^createMakeVars
+^RScripts$
+
+^cran-comments\.md$
 ^CRAN-SUBMISSION$
+^doc$
+^Meta$

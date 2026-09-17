@@ -32,6 +32,23 @@ test_that("Test getData()", {
 test_that("Test getData() from data tables on main and test database", {
   # comparing the outputs of both APIs, they should be identical
 
+  # helper function: get the Version field from the DESCRIPTION file of the iso-data ETL repo on a given branch
+  getIsoDataVersion <- function(branch) {
+    tryCatch({
+      con <- url(sprintf("https://raw.githubusercontent.com/Pandora-IsoMemo/iso-data/%s/DESCRIPTION", branch))
+      on.exit(close(con))
+      as.character(read.dcf(con, fields = "Version")[1, "Version"])
+    }, error = function(e) NA_character_)
+  }
+
+  mainVersion <- getIsoDataVersion("main")
+  betaVersion <- getIsoDataVersion("beta")
+
+  skip_if_not(
+    isTRUE(mainVersion == betaVersion),
+    sprintf("iso-data package version differs between main (%s) and beta (%s), ETLs differ", mainVersion, betaVersion)
+  )
+
   # helper function:
   mainEqualToTest <- function(main, test) {
     # identical no of rows?

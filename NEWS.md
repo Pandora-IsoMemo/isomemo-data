@@ -1,3 +1,9 @@
+# IsoMemo 26.09.0
+
+## Updates
+- Updated base image version.
+- Expanded and organized .Rbuildignore and .gitignore entries to reduce accidental inclusion of local/CI/build artifacts.
+
 # IsoMemo 23.11.0
 
 ## Updates
