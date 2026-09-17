@@ -6,6 +6,7 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/Pandora-IsoMemo/isomemo-data/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Pandora-IsoMemo/isomemo-data/actions/workflows/R-CMD-check.yaml)
+[![pkgdown](https://github.com/Pandora-IsoMemo/isomemo-data/actions/workflows/pkgdown.yaml/badge.svg)](https://github.com/Pandora-IsoMemo/isomemo-data/actions/workflows/pkgdown.yaml)
 <!-- badges: end -->
 
 IsoMemo is a Big Data initiative bringing together isotopic data from
@@ -45,7 +46,7 @@ You can install the released version of IsoMemo from
 
 ``` r
 install.packages("IsoMemo")
-#> Installiere Paket nach '/home/ljabel/R/x86_64-pc-linux-gnu-library/4.3'
+#> Installiere Paket nach '/tmp/RtmpgI67fm/temp_libpath3d442c80997'
 #> (da 'lib' nicht spezifiziert)
 ```
 
@@ -54,7 +55,7 @@ And the development version from [GitHub](https://github.com/) with:
 ``` r
 options(repos = c(getOption("repos"), PANDORA = "https://Pandora-IsoMemo.github.io/drat/"))
 install.packages("IsoMemo")
-#> Installiere Paket nach '/home/ljabel/R/x86_64-pc-linux-gnu-library/4.3'
+#> Installiere Paket nach '/tmp/RtmpgI67fm/temp_libpath3d442c80997'
 #> (da 'lib' nicht spezifiziert)
 ```
 
@@ -63,7 +64,7 @@ install.packages("IsoMemo")
 ``` r
 options(repos = c(getOption("repos"), PANDORA = "https://Pandora-IsoMemo.github.io/drat/"))
 install.packages("IsoMemo")
-#> Installiere Paket nach '/home/ljabel/R/x86_64-pc-linux-gnu-library/4.3'
+#> Installiere Paket nach '/tmp/RtmpgI67fm/temp_libpath3d442c80997'
 #> (da 'lib' nicht spezifiziert)
 
 library(IsoMemo)
